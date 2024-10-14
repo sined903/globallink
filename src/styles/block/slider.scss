@@ -37,18 +37,11 @@
   text-transform: uppercase;
   color: var(--white);
 
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 
 .slider__text {
-  width: 100%;
-  max-width: 718px;
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 22px;
-  color: var(--white);
-
-  margin-bottom: 50px;
+@extend %intro-text;
 }
 
 .slider__btn {
@@ -81,9 +74,9 @@
   position: absolute;
   left: 50%;
   transform: translateY(-50%);
-  bottom: 55px;
+  bottom: 50px;
 
-  z-index: 1;
+  z-index: 10;
   list-style-type: none;
 
   display: flex;
@@ -97,8 +90,11 @@
   border-radius: 50%;
   background-color: var(--white);
   cursor: pointer;
+
+
 }
 
 .slider__dot_active {
   background-color: transparent;
+  cursor: default;
 }

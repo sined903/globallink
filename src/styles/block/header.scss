@@ -50,6 +50,10 @@
   background-color: var(--orange)
 }
 
+.header__link_active {
+  background-color: var(--orange);
+}
+
 .header__contact {
   height: 100%;
   display: flex;

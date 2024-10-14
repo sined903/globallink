@@ -1,0 +1,19 @@
+.intro__wrapp {
+  @extend %intro-wrapp;
+}
+
+.intro__content {
+  @extend %intro-content;
+}
+
+.intro__title {
+  @extend %intro-title; 
+}
+
+.intro__text {
+  @extend %intro-text;
+}
+
+.intro__img {
+  @extend %intro-img;
+}

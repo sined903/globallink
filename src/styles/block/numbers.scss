@@ -1,0 +1,58 @@
+.numbers {
+  padding-top: 108px;
+  padding-bottom: 148px;
+  background: var(--grey);
+}
+
+
+.numbers__container {
+  @extend %container;
+}
+
+.numbers__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 117%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 105px;
+}
+
+.numbers__list {
+  width: 100%;
+  max-width: 1436px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numbers__card {
+  width: 100%;
+  max-width: 305px;
+  box-shadow: 0 20px 70px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 47px 20px 26px 20px;
+  background-color: var(--white);
+}
+
+.numbers__item {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--orange);
+  margin-bottom: 32px;
+}
+
+.numbers__name {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 117%;
+  text-align: center;
+  color: var(--black);
+}
