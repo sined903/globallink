@@ -8,6 +8,11 @@
   height: 123px
 }
 
+.header__fix {
+  position: static;
+  background-color: var(--black);
+}
+
 .header__container {
   @extend %container;
   display: flex;
