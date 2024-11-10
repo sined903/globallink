@@ -87,6 +87,11 @@ module.exports = {
       filename: "pay/index.html",
       template: "src/pay/template.html"
     }),
+    new HtmlWebpackPlugin({
+      title: "Contact",
+      filename: "contact/index.html",
+      template: "src/contact/template.html"
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css'
     })
