@@ -1,0 +1,48 @@
+.deadline {
+  padding: 100px 0 100px;
+}
+
+.deadline__container {
+  @extend %container;
+}
+
+.deadline__wrapp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0 120px
+}
+
+.deadline__image {
+  text-align: right;
+}
+
+.deadline__img {
+  width: 100%;
+}
+
+
+.deadline__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 117%;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 65px;
+}
+
+.deadline__text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 133%;
+  color: var(--black);
+  width: 100%;
+  max-width: 768px;
+
+  & span {
+    font-weight: 700;
+    color: var(--orange);
+  }
+}

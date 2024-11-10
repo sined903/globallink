@@ -1,0 +1,116 @@
+.advant {
+  padding: 106px 0 112px;
+  background-color: var(--grey)
+}
+
+.advant__container {
+  @extend %container;
+}
+
+.advant__title {
+  @extend %title;
+  max-width: 735px;
+  margin-bottom: 77px;
+}
+
+.advant__line {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 185px;
+}
+
+.advant__line_second {
+  grid-template-columns: 1.1fr 1fr;
+  margin-bottom: 0;
+}
+
+.advant__line_second .advant__content {
+  margin-left: 15px;
+}
+
+.advant__line_second .advant__text {
+  font-size: 26px;
+}
+
+.advant__sub-title {
+  width: 100%;
+  max-width: 478px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 143%;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 40px;
+
+  & span {
+    color: var(--orange);
+  }
+}
+
+.advant__text {
+  width: 100%;
+  max-width: 458px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #585858;
+  margin-bottom: 25px;
+}
+
+.advant__img {
+  width: 100%;
+}
+
+.advant__list {
+  display: flex;
+  flex-direction: column;
+  gap: 55px 0;
+  counter-reset: myCounter;
+}
+
+.advant__item {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 200%;
+  text-transform: uppercase;
+  color: var(--orange);
+  list-style: none;
+
+  & p {
+    width: 100%;
+    max-width: 660px;
+    margin-top: 15px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #585858;
+    text-transform: none;
+  }
+
+  &:before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+
+    display: inline-block;
+    text-align: center;
+    line-height: normal;
+    height: auto;
+    width: auto;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--black);
+    margin: 0 15px 0 0;
+  }
+
+  &:nth-child(-n+9):before {
+    content: "0" counter(myCounter);
+  }
+}
