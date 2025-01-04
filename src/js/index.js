@@ -5,6 +5,8 @@ import '../contact/template.html';
 import '../styles/main.scss';
 
 import { burger } from './modules/burger';
+import { modal } from './modules/modal';
 
 burger();
+modal();
 
