@@ -4,3 +4,7 @@ import '../pay/template.html';
 import '../contact/template.html';
 import '../styles/main.scss';
 
+import { burger } from './modules/burger';
+
+burger();
+
