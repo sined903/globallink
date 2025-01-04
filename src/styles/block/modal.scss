@@ -1,0 +1,258 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.modal__active {
+  display: block;
+}
+
+.modal__background {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.modal__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 21;
+
+  transform: translate3d(-50%, -50%, 0);
+
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 700px;
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 35px 10px;
+  position: relative;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 22;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 23;
+
+    width: 25px;
+    height: 2px;
+    background-color: var(--black);
+    transform: rotate(45deg);
+  } 
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 23;
+
+    width: 25px;
+    height: 2px;
+    background-color: var(--black);
+    transform: rotate(135deg);
+
+  }
+}
+
+.modal__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: var(--orange);
+
+  margin-bottom: 35px;
+}
+
+.modal__line {
+  width: 100%;
+  max-width: 550px;
+  background-color: #bbb;
+  margin: 0 auto 35px;
+}
+
+.modal__form {
+  width: 100%;
+  max-width: 475px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+}
+
+.modal__name, .modal__tel, .modal__mail {
+  width: 100%;
+  height: 50px;
+  background: #E4E4E4;
+  border: 1px solid #D3D3D3;
+  border-radius: 30px;
+  padding: 0 30px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  color: #7e7e7e;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal__btn {
+  width: 100%;
+  max-width: 182px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  text-align: center;
+  color: var(--white);
+
+  border: none;
+  border-radius: 30px;
+  background-color: var(--orange);
+  padding: 15px 0;
+
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.modal__check-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.modal__label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--white);
+}
+
+.modal__checkbox-text {
+  color: var(--black);
+}
+
+.modal__policy-link {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+
+.modal__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.modal__checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.modal__checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+  border: 1px solid #7e7e7e;;
+  background-color: var(--white);
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.modal__checkbox:checked+label::before {
+  background-color:var(--orange);
+  background-image: url("../assets/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+}
+
+@media (hover:hover) {
+  .modal__btn:hover {
+    background: var(--dark-orange);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal__title {
+    font-size: 25px;
+    line-height: 140%;  
+  }
+
+  .modal__line {
+    max-width: 260px;
+  }
+
+  .modal__form {
+    max-width: 225px;
+    gap: 20px 0;
+  }
+
+  .modal__name, .modal__tel, .modal__mail {
+    font-size: 12px;
+    height: 37px;
+    padding: 0 20px;
+  }
+
+  .modal__checkbox-text {
+    font-size: 12px;
+  }
+
+  .modal__checkbox+label::before {
+    width: 27px;
+    height: 27px;
+  }
+
+  .modal__btn {
+    max-width: 120px;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .modal__close-btn {
+    top: 5px;
+    right: 5px;
+
+    &:after{
+      width: 20px;
+    } 
+  
+    &:before {
+      width: 20px;
+    }
+  }
+}
