@@ -7,10 +7,12 @@ import "../styles/main.scss";
 import { burger } from "./modules/burger";
 import { modal } from "./modules/modal";
 import { mainSlider } from "./modules/main_slider";
+import { numberAnim } from "./modules/numbers_animation";
 
 burger();
 modal();
 mainSlider();
+numberAnim();
 
 
 
