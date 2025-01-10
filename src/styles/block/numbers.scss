@@ -25,6 +25,7 @@
   max-width: 1436px;
   margin: 0 auto;
   display: flex;
+  gap: 0 20px;
   justify-content: space-between;
 }
 
@@ -55,4 +56,49 @@
   line-height: 117%;
   text-align: center;
   color: var(--black);
+}
+
+@media (max-width: 992px) {
+  .numbers__name {
+    font-size: 20px;
+    line-height: 117%;
+  }
+
+  .numbers__item {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .numbers {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .numbers__title {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+
+  .numbers__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
+  };
+
+  .numbers__name {
+    font-size: 14px;
+    line-height: 117%;
+  }
+
+  .numbers__item {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .numbers__card {
+    padding: 20px;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  }
 }
