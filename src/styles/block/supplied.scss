@@ -1,5 +1,5 @@
 .supplied {
-  padding: 150px 0 157px;
+  padding: 150px 0 60px;
 }
 
 .supplied__container {
@@ -52,4 +52,31 @@
   &:nth-child(-n+9):before {
     content: "0" counter(myCounter);
   }
+}
+
+@media (max-width: 768px) {
+  .supplied {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .supplied__title {
+    font-size: 25px;
+    margin-bottom: 45px;
+  }
+
+  .supplied__list {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+
+  .supplied__item {
+    font-size: 18px;
+
+    &::before {
+      font-size: 18px;
+    }
+  }
+
+  
 }
