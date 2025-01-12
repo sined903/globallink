@@ -6,6 +6,14 @@
   @extend %intro-content;
 }
 
+.intro__container {
+ @extend %intro-container; 
+}
+
+.intro__page {
+  @extend %intro-page;
+}
+
 .intro__title {
   @extend %intro-title; 
 }
@@ -16,4 +24,72 @@
 
 .intro__img {
   @extend %intro-img;
+}
+
+@media (max-width: 1250px) {
+  .intro__title {
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+
+  .intro__text {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .intro__container {
+    padding: 60px 20px 20px;
+  }
+  
+  .intro__title {
+    max-width: 420px;
+    font-size: 25px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  .intro__text {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .intro {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .intro__wrapp {
+    height: 100%;
+  }
+
+  .intro__container {
+    padding: 125px 25px 20px;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 20px 0;
+  }
+
+  .intro__page {
+    display: block;
+  }
+
+  .intro__background {
+    height: 100%;
+  }
+
+  .intro__img {
+    height: 100%;
+    width: auto;
+  }
+  
 }
