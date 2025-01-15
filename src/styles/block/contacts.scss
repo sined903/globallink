@@ -41,19 +41,20 @@
 .contacts__table {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px 0;
+  gap: 25px 0;
 }
 
 .contacts__table-row {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  align-items: center;
 }
 
 .contacts__table-name {
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
-  line-height: 225%;
+  line-height: 28px;
   color: #878787;
 }
 
@@ -61,7 +62,7 @@
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 20px;
-  line-height: 150%;
+  line-height: 28px;
   color: var(--black);
 }
 
@@ -102,10 +103,6 @@
     font-weight: 700;
     font-size: 18px; 
     line-height: 28px;
-  }
-
-  .contacts__table {
-    gap: 25px 0;
   }
 
   .contacts__table-row {
